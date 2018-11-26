@@ -21,11 +21,14 @@ namespace Tic_Tac_Toe
         }
 
         private void newGame(object sender, EventArgs e) {
+            // Prevents further moves from being played
             freezeBoard = false;
+            // Initialized gameBoard array to all empty slots
             for (int i = 0; i < gameBoard.Length; i++)
             {
                 gameBoard[i] = 'e';
             }
+            // Resets screen to empty board
             square1.Image = square2.Image = square3.Image = square4.Image = square5.Image = square6.Image = square7.Image = square8.Image = square9.Image = System.Drawing.Image.FromFile("empty.png");
             
         }
@@ -46,6 +49,7 @@ namespace Tic_Tac_Toe
             }
         }
         
+        // This function executes after each move to check and see if there is a winner.
         private bool checkVictory(object sender, EventArgs e, int recentMove) {
             if (gameBoard[recentMove] == 'x') {
                 if (gameBoard[0] == 'x'){
@@ -103,10 +107,6 @@ namespace Tic_Tac_Toe
                         // x victory
                     }
                 }
-                if (gameBoard[5] == 'x')
-                {
-
-                }
                 if (gameBoard[6] == 'x')
                 {
                     if (gameBoard[7] == 'x' && gameBoard[8] == 'x')
@@ -115,14 +115,6 @@ namespace Tic_Tac_Toe
                         return true;
                         // x victory
                     }
-                }
-                if (gameBoard[7] == 'x')
-                {
-
-                }
-                if (gameBoard[8] == 'x')
-                {
-
                 }
             }
             else
@@ -184,10 +176,6 @@ namespace Tic_Tac_Toe
                         // o victory
                     }
                 }
-                if (gameBoard[5] == 'o')
-                {
-
-                }
                 if (gameBoard[6] == 'o')
                 {
                     if (gameBoard[7] == 'o' && gameBoard[8] == 'o')
@@ -197,20 +185,14 @@ namespace Tic_Tac_Toe
                         // o victory
                     }
                 }
-                if (gameBoard[7] == 'o')
-                {
-
-                }
-                if (gameBoard[8] == 'o')
-                {
-
-                }
             }
             return false;
         }
 
         private void nextMove(object sender, EventArgs e, int finalMovePosition) {
             freezeBoard = checkVictory(sender, e, finalMovePosition);
+
+            // If a game has ended, the player won't be able to keep placing X's
             if (freezeBoard) {
                 return;
             }
