@@ -215,10 +215,10 @@
             this.playerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.playerScore.Location = new System.Drawing.Point(177, 2);
             this.playerScore.Name = "playerScore";
-            this.playerScore.Size = new System.Drawing.Size(33, 33);
+            this.playerScore.Size = new System.Drawing.Size(65, 33);
             this.playerScore.TabIndex = 28;
             this.playerScore.Text = "0";
-            this.playerScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.playerScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label1
             // 
@@ -235,10 +235,10 @@
             this.computerScore.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.computerScore.Location = new System.Drawing.Point(556, 2);
             this.computerScore.Name = "computerScore";
-            this.computerScore.Size = new System.Drawing.Size(33, 33);
+            this.computerScore.Size = new System.Drawing.Size(60, 33);
             this.computerScore.TabIndex = 30;
             this.computerScore.Text = "0";
-            this.computerScore.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.computerScore.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // label3
             // 
